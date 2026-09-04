@@ -6,7 +6,7 @@
 
 **Production-feedback-to-benchmark lifecycle engineering for security and agent evaluations**
 
-`Failure clustering` · `Novelty` · `Difficulty` · `Coverage gaps` · `Deduplication` · `Human approval`
+`Failure clustering` · `Novelty` · `Difficulty` · `Coverage gaps` · `Deduplication` · `Human approval`\n\n[![CI](https://github.com/VinayK88/GoldenSet-Factory/actions/workflows/ci.yml/badge.svg)](https://github.com/VinayK88/GoldenSet-Factory/actions/workflows/ci.yml) [![Python](https://img.shields.io/badge/Python-3.10--3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
 
@@ -116,7 +116,7 @@ flowchart LR
 
 ## Dashboard
 
-The Streamlit UI uses the same Apple-inspired design system as the rest of the portfolio: large typography, clean white space, soft-gray surfaces, rounded cards, restrained color, and executive-first hierarchy.
+The Streamlit UI emphasizes benchmark-health evidence, compact governance controls, and executive-to-analyst drill-downs.
 
 KPI families cover feedback volume and source mix, critical/recoverable feedback, current benchmark size, underrepresented/balanced/overrepresented modes, mean/minimum coverage ratio, maximum coverage gap, candidate selection rate, novelty/difficulty distributions, critical candidates, cluster and source diversity, benchmark growth, human approval, and the explicit no-auto-promotion boundary.
 
@@ -274,6 +274,14 @@ The generated version manifest records the base version, candidate additions, re
 
 ---
 
+## Reproducible benchmark evidence
+
+CI executes the lifecycle runner with a fixed seed on Python 3.10–3.12 and uploads the generated candidate set, coverage table, metrics, and manifest. The manifest includes a deterministic SHA-256 over selected candidate identities and provenance fields.
+
+See [the benchmark protocol](reports/benchmark-protocol.json) and [GitHub Actions](https://github.com/VinayK88/GoldenSet-Factory/actions).
+
+---
+
 ## Repository map
 
 ```text
@@ -294,7 +302,7 @@ The generated version manifest records the base version, candidate additions, re
 ## Run locally
 
 ```bash
-pip install -r requirements.txt
+pip install -e '.[dev]'
 python engine.py --out artifacts --feedback 2500 --target 120
 streamlit run app.py
 ```

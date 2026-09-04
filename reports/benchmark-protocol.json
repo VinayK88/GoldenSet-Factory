@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "project": "GoldenSet-Factory",
+  "synthetic": true,
+  "seed": 42,
+  "command": "python engine.py --out artifacts --feedback 900 --target 80 --seed 42",
+  "outputs": [
+    "coverage.csv",
+    "candidate_cases.csv",
+    "manifest.json",
+    "metrics.json"
+  ],
+  "integrity": "manifest.json contains a deterministic SHA-256 of the selected candidate identities and provenance fields.",
+  "ci_python": [
+    "3.10",
+    "3.11",
+    "3.12"
+  ],
+  "limitations": "Synthetic lifecycle evidence only. Human approval remains required before benchmark promotion."
+}
